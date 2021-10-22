@@ -9,7 +9,7 @@ function App() {
       <img src="Nala.jpg" alt="" height="auto" width="auto"/>
     
       </header>
-     
+     <h4>Esto es una prueba de la pagina los amigos de Nala</h4>
     </div>
   );
 }
