@@ -1,25 +1,28 @@
 {
   "files": {
-    "main.css": "/losamigosdenala/static/css/main.5739ad41.chunk.css",
-    "main.js": "/losamigosdenala/static/js/main.833142aa.chunk.js",
-    "main.js.map": "/losamigosdenala/static/js/main.833142aa.chunk.js.map",
-    "runtime-main.js": "/losamigosdenala/static/js/runtime-main.3c0bcdef.js",
-    "runtime-main.js.map": "/losamigosdenala/static/js/runtime-main.3c0bcdef.js.map",
+    "main.css": "/losamigosdenala/static/css/main.699d5caf.chunk.css",
+    "main.js": "/losamigosdenala/static/js/main.16106bbc.chunk.js",
+    "main.js.map": "/losamigosdenala/static/js/main.16106bbc.chunk.js.map",
+    "runtime-main.js": "/losamigosdenala/static/js/runtime-main.029a449c.js",
+    "runtime-main.js.map": "/losamigosdenala/static/js/runtime-main.029a449c.js.map",
     "static/css/2.0a9ec390.chunk.css": "/losamigosdenala/static/css/2.0a9ec390.chunk.css",
-    "static/js/2.46405b4e.chunk.js": "/losamigosdenala/static/js/2.46405b4e.chunk.js",
-    "static/js/2.46405b4e.chunk.js.map": "/losamigosdenala/static/js/2.46405b4e.chunk.js.map",
-    "static/js/3.b7fa0450.chunk.js": "/losamigosdenala/static/js/3.b7fa0450.chunk.js",
-    "static/js/3.b7fa0450.chunk.js.map": "/losamigosdenala/static/js/3.b7fa0450.chunk.js.map",
+    "static/js/2.cfa0de27.chunk.js": "/losamigosdenala/static/js/2.cfa0de27.chunk.js",
+    "static/js/2.cfa0de27.chunk.js.map": "/losamigosdenala/static/js/2.cfa0de27.chunk.js.map",
+    "static/js/3.58495fdf.chunk.js": "/losamigosdenala/static/js/3.58495fdf.chunk.js",
+    "static/js/3.58495fdf.chunk.js.map": "/losamigosdenala/static/js/3.58495fdf.chunk.js.map",
     "index.html": "/losamigosdenala/index.html",
     "static/css/2.0a9ec390.chunk.css.map": "/losamigosdenala/static/css/2.0a9ec390.chunk.css.map",
-    "static/css/main.5739ad41.chunk.css.map": "/losamigosdenala/static/css/main.5739ad41.chunk.css.map",
-    "static/js/2.46405b4e.chunk.js.LICENSE.txt": "/losamigosdenala/static/js/2.46405b4e.chunk.js.LICENSE.txt"
+    "static/css/main.699d5caf.chunk.css.map": "/losamigosdenala/static/css/main.699d5caf.chunk.css.map",
+    "static/js/2.cfa0de27.chunk.js.LICENSE.txt": "/losamigosdenala/static/js/2.cfa0de27.chunk.js.LICENSE.txt",
+    "static/media/blog-post.1.f3cf63a6.md": "/losamigosdenala/static/media/blog-post.1.f3cf63a6.md",
+    "static/media/blog-post.2.3d25258a.md": "/losamigosdenala/static/media/blog-post.2.3d25258a.md",
+    "static/media/blog-post.3.b4b9d22a.md": "/losamigosdenala/static/media/blog-post.3.b4b9d22a.md"
   },
   "entrypoints": [
-    "static/js/runtime-main.3c0bcdef.js",
+    "static/js/runtime-main.029a449c.js",
     "static/css/2.0a9ec390.chunk.css",
-    "static/js/2.46405b4e.chunk.js",
-    "static/css/main.5739ad41.chunk.css",
-    "static/js/main.833142aa.chunk.js"
+    "static/js/2.cfa0de27.chunk.js",
+    "static/css/main.699d5caf.chunk.css",
+    "static/js/main.16106bbc.chunk.js"
   ]
 }
