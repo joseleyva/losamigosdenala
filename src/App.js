@@ -79,8 +79,8 @@ function App() {
         <img
           alt=""
           src="IconNala.png"
-          width="30"
-          height="30"
+          width="25"
+          height="25"
           className="d-inline-block align-top"
         />{' '}
       Los Amigos de Nala
