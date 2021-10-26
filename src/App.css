@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+.Barra{
+  background-color: aquamarine;
+  font-size: larger;
+}
+.NavB{
+ font-family: sans-serif;
+}
+
+.nav-link{
+  color: black!important;
+}
