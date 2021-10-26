@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/losamigosdenala/static/css/main.699d5caf.chunk.css",
-    "main.js": "/losamigosdenala/static/js/main.792fed85.chunk.js",
-    "main.js.map": "/losamigosdenala/static/js/main.792fed85.chunk.js.map",
+    "main.css": "/losamigosdenala/static/css/main.277e83b1.chunk.css",
+    "main.js": "/losamigosdenala/static/js/main.d120cdc4.chunk.js",
+    "main.js.map": "/losamigosdenala/static/js/main.d120cdc4.chunk.js.map",
     "runtime-main.js": "/losamigosdenala/static/js/runtime-main.029a449c.js",
     "runtime-main.js.map": "/losamigosdenala/static/js/runtime-main.029a449c.js.map",
     "static/css/2.0a9ec390.chunk.css": "/losamigosdenala/static/css/2.0a9ec390.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.58495fdf.chunk.js.map": "/losamigosdenala/static/js/3.58495fdf.chunk.js.map",
     "index.html": "/losamigosdenala/index.html",
     "static/css/2.0a9ec390.chunk.css.map": "/losamigosdenala/static/css/2.0a9ec390.chunk.css.map",
-    "static/css/main.699d5caf.chunk.css.map": "/losamigosdenala/static/css/main.699d5caf.chunk.css.map",
+    "static/css/main.277e83b1.chunk.css.map": "/losamigosdenala/static/css/main.277e83b1.chunk.css.map",
     "static/js/2.cfa0de27.chunk.js.LICENSE.txt": "/losamigosdenala/static/js/2.cfa0de27.chunk.js.LICENSE.txt",
     "static/media/blog-post.1.f3cf63a6.md": "/losamigosdenala/static/media/blog-post.1.f3cf63a6.md",
     "static/media/blog-post.2.3d25258a.md": "/losamigosdenala/static/media/blog-post.2.3d25258a.md",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.029a449c.js",
     "static/css/2.0a9ec390.chunk.css",
     "static/js/2.cfa0de27.chunk.js",
-    "static/css/main.699d5caf.chunk.css",
-    "static/js/main.792fed85.chunk.js"
+    "static/css/main.277e83b1.chunk.css",
+    "static/js/main.d120cdc4.chunk.js"
   ]
 }
