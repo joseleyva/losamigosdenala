@@ -75,7 +75,10 @@ function App() {
       <header >
       <Navbar className="Barra">
   <Container fluid>
-  <Navbar.Brand href="/">
+  
+    <Navbar.Toggle aria-controls="navbarScroll" />
+    <Navbar.Collapse id="navbarScroll">
+    <Navbar.Brand href="/">
         <img
           alt=""
           src="IconNala.png"
@@ -85,10 +88,8 @@ function App() {
         />{' '}
       Los Amigos de Nala
       </Navbar.Brand>
-    <Navbar.Toggle aria-controls="navbarScroll" />
-    <Navbar.Collapse id="navbarScroll">
       <Nav
-        className="me-auto my-2 my-lg-0 NavB"
+        className="me-auto  NavB"
       >
         <Nav.Link href="">Mascotas</Nav.Link>
         <Nav.Link href="">Contacto</Nav.Link>
