@@ -1,0 +1,29 @@
+@import "../../scss/index.scss";
+@import "~antd/dist/antd.css";
+
+.menu-top {
+  display: flex;
+
+  button {
+    background-color: transparent;
+    color: $font-light;
+    &:hover {
+        background-color: $primary-color;
+     
+    }
+    &:focus,
+    &:active {
+        background-color: $font-light;
+    }
+  }
+  &__left {
+    &-logo {
+      width: 75px;
+      padding: 0 10px;
+    }
+  }
+  &__right {
+    position: absolute;
+    right: 0;
+  }
+}
