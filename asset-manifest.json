@@ -1,28 +1,27 @@
 {
   "files": {
-    "main.css": "/losamigosdenala/static/css/main.277e83b1.chunk.css",
-    "main.js": "/losamigosdenala/static/js/main.d120cdc4.chunk.js",
-    "main.js.map": "/losamigosdenala/static/js/main.d120cdc4.chunk.js.map",
-    "runtime-main.js": "/losamigosdenala/static/js/runtime-main.029a449c.js",
-    "runtime-main.js.map": "/losamigosdenala/static/js/runtime-main.029a449c.js.map",
-    "static/css/2.0a9ec390.chunk.css": "/losamigosdenala/static/css/2.0a9ec390.chunk.css",
-    "static/js/2.cfa0de27.chunk.js": "/losamigosdenala/static/js/2.cfa0de27.chunk.js",
-    "static/js/2.cfa0de27.chunk.js.map": "/losamigosdenala/static/js/2.cfa0de27.chunk.js.map",
-    "static/js/3.58495fdf.chunk.js": "/losamigosdenala/static/js/3.58495fdf.chunk.js",
-    "static/js/3.58495fdf.chunk.js.map": "/losamigosdenala/static/js/3.58495fdf.chunk.js.map",
-    "index.html": "/losamigosdenala/index.html",
-    "static/css/2.0a9ec390.chunk.css.map": "/losamigosdenala/static/css/2.0a9ec390.chunk.css.map",
-    "static/css/main.277e83b1.chunk.css.map": "/losamigosdenala/static/css/main.277e83b1.chunk.css.map",
-    "static/js/2.cfa0de27.chunk.js.LICENSE.txt": "/losamigosdenala/static/js/2.cfa0de27.chunk.js.LICENSE.txt",
-    "static/media/blog-post.1.f3cf63a6.md": "/losamigosdenala/static/media/blog-post.1.f3cf63a6.md",
-    "static/media/blog-post.2.3d25258a.md": "/losamigosdenala/static/media/blog-post.2.3d25258a.md",
-    "static/media/blog-post.3.b4b9d22a.md": "/losamigosdenala/static/media/blog-post.3.b4b9d22a.md"
+    "main.css": "/static/css/main.2e511af0.chunk.css",
+    "main.js": "/static/js/main.c1520ec4.chunk.js",
+    "main.js.map": "/static/js/main.c1520ec4.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.30df9488.js",
+    "runtime-main.js.map": "/static/js/runtime-main.30df9488.js.map",
+    "static/css/2.9c55b8bb.chunk.css": "/static/css/2.9c55b8bb.chunk.css",
+    "static/js/2.a2234fb0.chunk.js": "/static/js/2.a2234fb0.chunk.js",
+    "static/js/2.a2234fb0.chunk.js.map": "/static/js/2.a2234fb0.chunk.js.map",
+    "static/js/3.c4d56d55.chunk.js": "/static/js/3.c4d56d55.chunk.js",
+    "static/js/3.c4d56d55.chunk.js.map": "/static/js/3.c4d56d55.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.9c55b8bb.chunk.css.map": "/static/css/2.9c55b8bb.chunk.css.map",
+    "static/css/main.2e511af0.chunk.css.map": "/static/css/main.2e511af0.chunk.css.map",
+    "static/js/2.a2234fb0.chunk.js.LICENSE.txt": "/static/js/2.a2234fb0.chunk.js.LICENSE.txt",
+    "static/media/IconNala.1fb9a4de.png": "/static/media/IconNala.1fb9a4de.png",
+    "static/media/SignIn.scss": "/static/media/background-v1.cf7d7d05.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.029a449c.js",
-    "static/css/2.0a9ec390.chunk.css",
-    "static/js/2.cfa0de27.chunk.js",
-    "static/css/main.277e83b1.chunk.css",
-    "static/js/main.d120cdc4.chunk.js"
+    "static/js/runtime-main.30df9488.js",
+    "static/css/2.9c55b8bb.chunk.css",
+    "static/js/2.a2234fb0.chunk.js",
+    "static/css/main.2e511af0.chunk.css",
+    "static/js/main.c1520ec4.chunk.js"
   ]
 }
