@@ -36,14 +36,14 @@
                 width: 50%;
                 height: 60px!important;
                 text-align: center;
-                font-size: 0em+19px/$defaultFontSiza;
+                font-size: 0em+19px/$defaultFontSize;
                 border-top: 4px solid $border-grey!important;
                 border-radius: 0 !important;
                 margin: 0!important;
                 display: block;
                 @media(min-width: $media-breackpoint-up-lg){
                     width: 220px;
-                    font-size: 0em +23px/ $defaultFontSiza;
+                    font-size: 0em +23px/ $defaultFontSize;
                 }
                 &:hover{
                     color: $font-grey-dark;

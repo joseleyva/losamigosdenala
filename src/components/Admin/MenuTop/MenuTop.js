@@ -1,6 +1,6 @@
 import React from "react";
 import "./MenuTop.scss";
-import NalaLogo from "../../assets/img/png/IconNala.png";
+import NalaLogo from "../../../assets/img/png/IconNala.png";
 import { Button } from "antd";
 import {MenuUnfoldOutlined, PoweroffOutlined, MenuFoldOutlined } from "@ant-design/icons";
 
