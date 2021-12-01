@@ -1,133 +1,178 @@
 import React, { useState } from "react";
 import "./RegisterForm.scss";
-import { Form, Input, Checkbox, notification } from "antd";
-import {Button} from 'react-bootstrap';
-import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import Box from '@mui/material/Box';
+import { ThemeProvider } from '@mui/material/styles';
+import { Form, Row, FloatingLabel, Col, Button } from 'react-bootstrap';
+import { useTheme } from '@mui/material/styles';
+import { Formik } from 'formik';
+import {notification} from 'antd';
+import * as yup from 'yup';
+
 import { signUpApi } from "../../../api/user";
-import {emailValidation, minLengthValidation} from '../../../utils/formValidation';
 
-export default function RegisterForm() {
-  const [inputs, setInputs] = useState({
-    email: "",
-    password: "",
-    repeatPassword: "",
-    privacyPolicy: false,
-  });
-  const [formValid, setFormValid] = useState({
-    email: false,
-    password: false,
-    repeatPassword: false,
-    privacyPolicy: false,
-  });
 
-  const changeForm = e => {
-    if (e.target.name === "privacyPolicy") {
-      setInputs({
-        ...inputs,
-        [e.target.name]: e.target.checked,
-      });
-    } else {
-      setInputs({
-        ...inputs,
-        [e.target.name]: e.target.value,
-      });
-    }
-  };
-  const inputValidation = e => {
-    const {type, name}=e.target;
-    if(type==="email"){
-        setFormValid({
-            ...formValid,
-            [name]: emailValidation(e.target)
-        });
-    }
-    if(type=== "password"){
-        setFormValid({
-            ...formValid,
-            [name]: minLengthValidation(e.target, 6)
-        });
-    }
-    if(type=== "checkbox"){
-        setFormValid({
-            ...formValid,
-            [name]: e.target.checked
-        })
-    }
+const schema = yup.object().shape({
+  name: yup.string().required("Ingrese su nombre"),
+  email: yup.string().required("Ingrese sus Correo").email('Correo no valido'),
+  password: yup.string().required("Ingrese su contraseña").matches(
+      /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
+      "Min 8 Caracteres, 1 Mayúscula, 1 Minúscula, Un Numero y Un Carácter Especial"
+    ),
+  repeatPassword: yup.string().required("Confirme su contraseña").min(8, 'Muy corta').oneOf([yup.ref("password"), null], "Passwords must match"),
+});
 
+ function RegisterForm() {
+  const [validated, setValidated] = useState(false)
+  const [fallo, setFallo] = useState(false);
+  const theme = useTheme();
+
+  const handleClick = (event) => {
+      const Button = event.currentTarget;
+      if (Button.checkValidity() === false) {
+
+      }
+
+      setFallo(true);
   };
-  const register = e => {
-      e.preventDefault();
-      const {email, password, repeatPassword, privacyPolicy}= formValid;
-    const emailVal = inputs.email;
-    const passwordVal = inputs.password;
-    const repeatPasswordVal = inputs.repeatPassword;
-    const privacyPolicyVal = inputs.privacyPolicy;
-    if (!emailVal || !passwordVal || !repeatPasswordVal || !privacyPolicyVal) {
-      notification["error"]({
-        message: "LLene todos los campos"
-      });
-    } else {
-      if (passwordVal !== repeatPasswordVal) {
-        notification["error"]({
-          message: "Las contaseñas son diferentes",
-        });
-      } else {
-        console.log("Correcto..");
-    }
-}
-  };
+ 
   return (
-    <Form className="register-form" onSubmit={register} onChange={changeForm}>
-      <Form.Item>
-        <Input
-          prefix={<UserOutlined />}
-          type="email"
-          name="email"
-          placeholder="Correo electronico"
-          className="register-form__input"
-          autoComplete="username"
-          onChange={inputValidation}
-          value={inputs.email}
-        />
-      </Form.Item>
-      <Form.Item>
-        <Input
-          prefix={<LockOutlined />}
-          type="password"
-          name="password"
-          placeholder="Contaseña"
-          autoComplete="new-password"
-          className="register-form__input"
-          onChange={inputValidation}
-          value={inputs.password}
-        />
-      </Form.Item>
-      <Form.Item>
-        <Input
-          prefix={<LockOutlined />}
-          type="password"
-          name="repeatPassword"
-          autoComplete="new-password"
-          placeholder="Repetir Contaseña"
-          className="register-form__input"
-          onChange={inputValidation}
-          values={inputs.repeatPassword}
-        />
-      </Form.Item>
-      <Form.Item>
-        <Checkbox
-          name="privacyPolicy"
-          onChange={inputValidation}
-          checked={inputs.privacyPolicy}
-        >
-          He leido y acepto la politica de privacidad
-        </Checkbox>
-      </Form.Item>
-      <Form.Item>
-        <Button type="submit" className="register-form__button">
-          Crear Cuenta
-        </Button>
-      </Form.Item>
-    </Form>
+      <Formik
+          validationSchema={schema}
+          onSubmit={async(valores, { resetForm }) => {
+              setValidated(true);
+              const result = await signUpApi(valores);
+              if (!result.ok) {
+                  notification["error"]({
+                    description: result.message,
+                   placement: 'bottomLeft',
+                  });
+              }else{
+                notification["success"]({
+                  description: result.message,
+                  placement: 'bottomLeft',
+                });
+                resetForm();
+              }
+          }}
+          initialValues={{
+              name: '',
+              email: '',
+              password: '',
+              repeatPassword: '',
+          }}
+      >
+          {({
+              handleSubmit,
+              handleChange,
+              handleBlur,
+              values,
+              touched,
+              isValid,
+              errors,
+          }) => (
+    
+             
+        
+            <ThemeProvider theme={theme}>
+             
+        <Box component="form" validated={validated} noValidate onSubmit={handleSubmit} sx={{ mt: 2 }}>
+            <Row className="mb-3">
+              <Form.Group as={Col} md="15" controlId="validationFormik01" className="position-relative">
+                <FloatingLabel
+                  controlId="floatingInput"
+                  label="Nombre"
+
+                >
+                  <Form.Control
+                    className="FormInicio"
+                    type="text"
+                    placeholder="Ingrese el nombre"
+                    name="name"
+                    value={values.name}
+                    onChange={handleChange}
+                    isValid={touched.name && !errors.name}
+                    isInvalid={fallo ? !!errors.name : false}
+                    required />
+                  <Form.Control.Feedback type="invalid" tooltip>{errors.name}</Form.Control.Feedback>
+                </FloatingLabel>
+              </Form.Group>
+            </Row>
+            <Row className="mb-3">
+              <Form.Group as={Col} md="15" className="position-relative" controlId="formGroupEmail">
+                <FloatingLabel
+                  controlId="floatingInput"
+                  label="Correo electronico"
+
+                >
+                  <Form.Control
+                    className="FormInicio"
+                    type="email"
+                    name="email"
+                    placeholder="Ingrese el correo"
+                    value={values.email}
+                    onChange={handleChange}
+                    isValid={touched.email && !errors.email}
+                    isInvalid={fallo ? !!errors.email : false}
+                    required />
+                  <Form.Control.Feedback type="invalid" tooltip>{errors.email}</Form.Control.Feedback>
+                </FloatingLabel>
+              </Form.Group>
+            </Row>
+            <Row className="mb-3">
+              <Form.Group as={Col} md="15" className="position-relative" controlId="formGroupPassword">
+
+                <FloatingLabel
+                  controlId="floatingInput"
+                  label="Contraseña"
+
+                >
+                  <Form.Control
+                    className="FormInicio"
+                    type="password"
+                    name="password"
+                    placeholder="Contraseña"
+                    value={values.password}
+                    onChange={handleChange}
+                    isValid={touched.password && !errors.password}
+                    isInvalid={fallo ? !!errors.password : false}
+                    required />
+                  <Form.Control.Feedback type="invalid" tooltip>{errors.password}</Form.Control.Feedback>
+                </FloatingLabel>
+              </Form.Group>
+            </Row>
+            <Row className="mb-3">
+              <Form.Group as={Col} md="15" className="position-relative" controlId="Password">
+                <FloatingLabel
+                  controlId="floatingInput"
+                  label="Confirmar Contraseña"
+
+                >
+                  <Form.Control
+                    className="FormInicio"
+                    type="password"
+                    name="repeatPassword"
+                    placeholder="Confirmar Contraseña"
+                    value={values.repeatPassword}
+                    onChange={handleChange}
+                    isValid={touched.repeatPassword && !errors.repeatPassword}
+                    isInvalid={fallo ? !!errors.repeatPassword : false}
+                    required />
+                  <Form.Control.Feedback type="invalid" tooltip>{errors.repeatPassword}</Form.Control.Feedback>
+                </FloatingLabel>
+              </Form.Group>
+            </Row>
+            <div className="d-grid gap-2">
+              <Button className="botonS" type="submit" onClick={handleClick}>Crear Cuenta</Button>
+            </div>
+           
+            </Box>
+           
+            </ThemeProvider>
+            
+            )}
+            
+          </Formik>
   );
 }
+
+export default RegisterForm;
