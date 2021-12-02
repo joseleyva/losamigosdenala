@@ -7,7 +7,6 @@ import { useTheme } from '@mui/material/styles';
 import { Formik } from 'formik';
 import {notification} from 'antd';
 import * as yup from 'yup';
-
 import { signUpApi } from "../../../api/user";
 
 

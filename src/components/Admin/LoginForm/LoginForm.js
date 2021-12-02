@@ -35,14 +35,16 @@ function InicioS() {
                 const result = await signInApi(valores);
                 if(result.message){
                     notification["error"]({
-                        message: result.message
+                        message: result.message,
+                        placement: 'bottomLeft',
                     });
                 }else{
                     const {accessToken, refreshToken}=result;
                     localStorage.setItem(ACCESS_TOKEN, accessToken);
                     localStorage.setItem(REFRESH_TOKEN, refreshToken);
                     notification["success"]({
-                        message: "Login correcto"
+                        message: "Login correcto",
+                        placement: 'bottomLeft',
                     });
                     window.location.href="/admin";
                 }
